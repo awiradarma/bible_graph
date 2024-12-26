@@ -1,0 +1,1881 @@
+{
+  "version": "2.0.0",
+  "visualisation": {
+    "nodes": [
+      {
+        "id": "n:1",
+        "position": {
+          "x": -28.307509762771325,
+          "y": -123.33757461631782
+        }
+      },
+      {
+        "id": "n:2",
+        "position": {
+          "x": -30.069520822938436,
+          "y": 93.67875504646608
+        }
+      },
+      {
+        "id": "n:3",
+        "position": {
+          "x": 203.77174966299228,
+          "y": -126.24413155160302
+        }
+      },
+      {
+        "id": "n:4",
+        "position": {
+          "x": 200.45779507398044,
+          "y": 91.48938963852004
+        }
+      },
+      {
+        "id": "n:5",
+        "position": {
+          "x": 350.6890795910736,
+          "y": -124.3601570814414
+        }
+      }
+    ]
+  },
+  "dataModel": {
+    "version": "2.0.0",
+    "graphSchemaRepresentation": {
+      "version": "1.0.0",
+      "graphSchema": {
+        "nodeLabels": [
+          {
+            "$id": "nl:1",
+            "token": "Book",
+            "properties": [
+              {
+                "$id": "p:1",
+                "token": "book_name",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:2",
+                "token": "chapter_count",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:3",
+                "token": "verse_count",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:4",
+                "token": "book_id",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:5",
+                "token": "christian_sequence",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:6",
+                "token": "usx_code",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:7",
+                "token": "writer_id",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:2",
+            "token": "Verse",
+            "properties": [
+              {
+                "$id": "p:8",
+                "token": "id",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:9",
+                "token": "book_id",
+                "type": {
+                  "type": "boolean"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:10",
+                "token": "chapter",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:11",
+                "token": "verse",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:12",
+                "token": "web",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:13",
+                "token": "kjv",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:3",
+            "token": "Person",
+            "properties": [
+              {
+                "$id": "p:15",
+                "token": "id",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:16",
+                "token": "name",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:17",
+                "token": "surname",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:18",
+                "token": "unique_attribute",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:19",
+                "token": "sex",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:4",
+            "token": "VerseID",
+            "properties": [
+              {
+                "$id": "p:23",
+                "token": "reference_id",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:24",
+                "token": "book_id",
+                "type": {
+                  "type": "boolean"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:25",
+                "token": "usx_code",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:26",
+                "token": "chapter",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:27",
+                "token": "verse",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:28",
+                "token": "verse_sequence",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:5",
+            "token": "PersonLabel",
+            "properties": [
+              {
+                "$id": "p:33",
+                "token": "person_label_id",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:34",
+                "token": "person_id",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:35",
+                "token": "english_label",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:36",
+                "token": "hebrew_label",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:37",
+                "token": "hebrew_label_transliterated",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:38",
+                "token": "hebrew_label_meaning",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:39",
+                "token": "hebrew_strongs_number",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:40",
+                "token": "greek_label",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:41",
+                "token": "greek_label_transliterated",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:42",
+                "token": "greek_label_meaning",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:43",
+                "token": "greek_strongs_number",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:44",
+                "token": "label_reference_id",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:45",
+                "token": "label_type",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:46",
+                "token": "label-given_by_god",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:47",
+                "token": "label_notes",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:48",
+                "token": "person_label_count",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              }
+            ]
+          }
+        ],
+        "relationshipTypes": [
+          {
+            "$id": "rt:1",
+            "token": "CONTAINS",
+            "properties": [
+              {
+                "$id": "p:14",
+                "token": "chapter",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "rt:2",
+            "token": "WROTE",
+            "properties": []
+          },
+          {
+            "$id": "rt:3",
+            "token": "IS_RELATED_TO",
+            "properties": [
+              {
+                "$id": "p:20",
+                "token": "type",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:21",
+                "token": "category",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:22",
+                "token": "verse",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "rt:4",
+            "token": "REFERENCES",
+            "properties": []
+          },
+          {
+            "$id": "rt:5",
+            "token": "MENTIONS",
+            "properties": [
+              {
+                "$id": "p:29",
+                "token": "label",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "rt:6",
+            "token": "HAS",
+            "properties": [
+              {
+                "$id": "p:30",
+                "token": "usx_code",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:31",
+                "token": "chapter",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:32",
+                "token": "verse",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "rt:7",
+            "token": "ALSO_KNOWN_AS",
+            "properties": [
+              {
+                "$id": "p:49",
+                "token": "sequence",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:50",
+                "token": "alias",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "rt:8",
+            "token": "FOUND_IN",
+            "properties": []
+          }
+        ],
+        "nodeObjectTypes": [
+          {
+            "$id": "n:1",
+            "labels": [
+              {
+                "$ref": "#nl:1"
+              }
+            ]
+          },
+          {
+            "$id": "n:2",
+            "labels": [
+              {
+                "$ref": "#nl:2"
+              }
+            ]
+          },
+          {
+            "$id": "n:3",
+            "labels": [
+              {
+                "$ref": "#nl:3"
+              }
+            ]
+          },
+          {
+            "$id": "n:4",
+            "labels": [
+              {
+                "$ref": "#nl:4"
+              }
+            ]
+          },
+          {
+            "$id": "n:5",
+            "labels": [
+              {
+                "$ref": "#nl:5"
+              }
+            ]
+          }
+        ],
+        "relationshipObjectTypes": [
+          {
+            "$id": "r:1",
+            "type": {
+              "$ref": "#rt:1"
+            },
+            "from": {
+              "$ref": "#n:1"
+            },
+            "to": {
+              "$ref": "#n:2"
+            }
+          },
+          {
+            "$id": "r:2",
+            "type": {
+              "$ref": "#rt:2"
+            },
+            "from": {
+              "$ref": "#n:3"
+            },
+            "to": {
+              "$ref": "#n:1"
+            }
+          },
+          {
+            "$id": "r:3",
+            "type": {
+              "$ref": "#rt:3"
+            },
+            "from": {
+              "$ref": "#n:3"
+            },
+            "to": {
+              "$ref": "#n:3"
+            }
+          },
+          {
+            "$id": "r:4",
+            "type": {
+              "$ref": "#rt:4"
+            },
+            "from": {
+              "$ref": "#n:4"
+            },
+            "to": {
+              "$ref": "#n:2"
+            }
+          },
+          {
+            "$id": "r:5",
+            "type": {
+              "$ref": "#rt:5"
+            },
+            "from": {
+              "$ref": "#n:4"
+            },
+            "to": {
+              "$ref": "#n:3"
+            }
+          },
+          {
+            "$id": "r:6",
+            "type": {
+              "$ref": "#rt:6"
+            },
+            "from": {
+              "$ref": "#n:1"
+            },
+            "to": {
+              "$ref": "#n:4"
+            }
+          },
+          {
+            "$id": "r:7",
+            "type": {
+              "$ref": "#rt:7"
+            },
+            "from": {
+              "$ref": "#n:3"
+            },
+            "to": {
+              "$ref": "#n:5"
+            }
+          },
+          {
+            "$id": "r:8",
+            "type": {
+              "$ref": "#rt:8"
+            },
+            "from": {
+              "$ref": "#n:5"
+            },
+            "to": {
+              "$ref": "#n:4"
+            }
+          }
+        ],
+        "constraints": [
+          {
+            "$id": "c:2",
+            "name": "id_Verse_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:2"
+            },
+            "properties": [
+              {
+                "$ref": "#p:8"
+              }
+            ]
+          },
+          {
+            "$id": "c:3",
+            "name": "id_Person_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:3"
+            },
+            "properties": [
+              {
+                "$ref": "#p:15"
+              }
+            ]
+          },
+          {
+            "$id": "c:4",
+            "name": "reference_id_VerseID_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:4"
+            },
+            "properties": [
+              {
+                "$ref": "#p:23"
+              }
+            ]
+          },
+          {
+            "$id": "c:1",
+            "name": "book_id_Book_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:1"
+            },
+            "properties": [
+              {
+                "$ref": "#p:4"
+              }
+            ]
+          },
+          {
+            "$id": "c:5",
+            "name": "person_label_id_PersonLabel_uniq",
+            "constraintType": "uniqueness",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:5"
+            },
+            "properties": [
+              {
+                "$ref": "#p:33"
+              }
+            ]
+          }
+        ],
+        "indexes": [
+          {
+            "$id": "i:1",
+            "name": "book_id_Book_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:1"
+            },
+            "properties": [
+              {
+                "$ref": "#p:4"
+              }
+            ]
+          },
+          {
+            "$id": "i:2",
+            "name": "id_Verse_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:2"
+            },
+            "properties": [
+              {
+                "$ref": "#p:8"
+              }
+            ]
+          },
+          {
+            "$id": "i:3",
+            "name": "id_Person_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:3"
+            },
+            "properties": [
+              {
+                "$ref": "#p:15"
+              }
+            ]
+          },
+          {
+            "$id": "i:4",
+            "name": "reference_id_VerseID_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:4"
+            },
+            "properties": [
+              {
+                "$ref": "#p:23"
+              }
+            ]
+          },
+          {
+            "$id": "i:5",
+            "name": "person_label_id_PersonLabel_uniq",
+            "indexType": "default",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:5"
+            },
+            "properties": [
+              {
+                "$ref": "#p:33"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "graphSchemaExtensionsRepresentation": {
+      "nodeKeyProperties": [
+        {
+          "node": {
+            "$ref": "#n:1"
+          },
+          "keyProperty": {
+            "$ref": "#p:4"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:2"
+          },
+          "keyProperty": {
+            "$ref": "#p:8"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:3"
+          },
+          "keyProperty": {
+            "$ref": "#p:15"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:4"
+          },
+          "keyProperty": {
+            "$ref": "#p:23"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:5"
+          },
+          "keyProperty": {
+            "$ref": "#p:33"
+          }
+        }
+      ]
+    },
+    "graphMappingRepresentation": {
+      "dataSourceSchema": {
+        "type": "local/csv",
+        "tableSchemas": [
+          {
+            "$id": "t:1",
+            "name": "BibleData-Book.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "book_name",
+                "type": "string",
+                "sample": "Genesis",
+                "include": true
+              },
+              {
+                "name": "hebrew_name",
+                "type": "string",
+                "sample": "בּראשׁית",
+                "include": true
+              },
+              {
+                "name": "hebrew_transliteration",
+                "type": "string",
+                "sample": "Bereshit",
+                "include": true
+              },
+              {
+                "name": "hebrew_meaning",
+                "type": "string",
+                "sample": "In the Beginning",
+                "include": true
+              },
+              {
+                "name": "greek_name",
+                "type": "string",
+                "sample": "Γένεσις",
+                "include": true
+              },
+              {
+                "name": "greek_transliteration",
+                "type": "string",
+                "sample": "Genesis",
+                "include": true
+              },
+              {
+                "name": "greek_meaning",
+                "type": "string",
+                "sample": "Beginning",
+                "include": true
+              },
+              {
+                "name": "chapter_count",
+                "type": "integer",
+                "sample": "50",
+                "include": true
+              },
+              {
+                "name": "verse_count",
+                "type": "integer",
+                "sample": "1533",
+                "include": true
+              },
+              {
+                "name": "book_id",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "christian_sequence",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "hebrew_sequence",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "short_name",
+                "type": "string",
+                "sample": "Gen",
+                "include": true
+              },
+              {
+                "name": "usx_code",
+                "type": "string",
+                "sample": "GEN",
+                "include": true
+              },
+              {
+                "name": "writer_id",
+                "type": "string",
+                "sample": "Moses_1",
+                "include": true
+              },
+              {
+                "name": "written_start_date",
+                "type": "integer",
+                "sample": "-1476",
+                "include": true
+              },
+              {
+                "name": "written_end_date",
+                "type": "string",
+                "sample": "",
+                "include": true
+              },
+              {
+                "name": "written_location_id",
+                "type": "string",
+                "sample": "",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:2",
+            "name": "AlamoPolyglot.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "id",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "book_id",
+                "type": "boolean",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "book_name",
+                "type": "string",
+                "sample": "Genesis",
+                "include": true
+              },
+              {
+                "name": "chapter",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "verse",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "world_english_bible_web",
+                "type": "string",
+                "sample": "In the beginning God{After \"God,\" the Hebrew has the two letters \"Aleph Tav\" (the first and last letters of the Hebrew alphabet) as a grammatical marker.} created the heavens and the earth.",
+                "include": true
+              },
+              {
+                "name": "king_james_bible_kjv",
+                "type": "string",
+                "sample": "In the beginning God created the heaven and the earth.",
+                "include": true
+              },
+              {
+                "name": "leningrad_codex",
+                "type": "string",
+                "sample": "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ׃ ‬",
+                "include": true
+              },
+              {
+                "name": "jewish_publication_society_jps",
+                "type": "string",
+                "sample": "In the beginning God created the heaven and the earth.",
+                "include": true
+              },
+              {
+                "name": "codex_alexandrinus",
+                "type": "string",
+                "sample": "ἐν ἀρχῇ ἐποίησεν ὁ θεὸς τὸν οὐρανὸν καὶ τὴν γῆν",
+                "include": true
+              },
+              {
+                "name": "brenton",
+                "type": "string",
+                "sample": "In the beginning God made the heaven and the earth.",
+                "include": true
+              },
+              {
+                "name": "samaritan_pentateuch",
+                "type": "string",
+                "sample": "בראשית ברא אלהים את השמים ואת הארץ",
+                "include": true
+              },
+              {
+                "name": "samaritan_pentateuch_english",
+                "type": "string",
+                "sample": "In the beginning God created the heaven and the earth.",
+                "include": true
+              },
+              {
+                "name": "onkelos_aramaic",
+                "type": "string",
+                "sample": "בְּקַדְמִין בְּרָא יְיָ יָת שְׁמַיָּא וְיָת אַרְעָא ",
+                "include": true
+              },
+              {
+                "name": "onkelos_english",
+                "type": "string",
+                "sample": "In the first times the Lord created the heavens and the earth.",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:3",
+            "name": "BibleData-Person.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "person_id",
+                "type": "string",
+                "sample": "YHVH_1",
+                "include": true
+              },
+              {
+                "name": "person_name",
+                "type": "string",
+                "sample": "YHVH",
+                "include": true
+              },
+              {
+                "name": "surname",
+                "type": "string",
+                "sample": "",
+                "include": true
+              },
+              {
+                "name": "unique_attribute",
+                "type": "string",
+                "sample": "Holy, Holy, Holy (ISA 6:3) and too many others to fit here",
+                "include": true
+              },
+              {
+                "name": "sex",
+                "type": "string",
+                "sample": "male",
+                "include": true
+              },
+              {
+                "name": "tribe",
+                "type": "string",
+                "sample": "",
+                "include": true
+              },
+              {
+                "name": "person_notes",
+                "type": "string",
+                "sample": "",
+                "include": true
+              },
+              {
+                "name": "name_instance",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "person_sequence",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:4",
+            "name": "BibleData-PersonRelationship.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "person_relationship_id",
+                "type": "string",
+                "sample": "YHVH_1:Adam_1:1",
+                "include": true
+              },
+              {
+                "name": "person_relationship_sequence",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "person_id_1",
+                "type": "string",
+                "sample": "YHVH_1",
+                "include": true
+              },
+              {
+                "name": "relationship_type",
+                "type": "string",
+                "sample": "Creator",
+                "include": true
+              },
+              {
+                "name": "person_id_2",
+                "type": "string",
+                "sample": "Adam_1",
+                "include": true
+              },
+              {
+                "name": "relationship_category",
+                "type": "string",
+                "sample": "explicit",
+                "include": true
+              },
+              {
+                "name": "reference_id",
+                "type": "string",
+                "sample": "GEN 2:7",
+                "include": true
+              },
+              {
+                "name": "relationship_notes",
+                "type": "string",
+                "sample": "",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:5",
+            "name": "BibleData-PersonVerse.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "person_verse_id",
+                "type": "string",
+                "sample": "GEN 1:1__YHVH_1_1",
+                "include": true
+              },
+              {
+                "name": "reference_id",
+                "type": "string",
+                "sample": "GEN 1:1",
+                "include": true
+              },
+              {
+                "name": "person_label_id",
+                "type": "string",
+                "sample": "YHVH_1_1",
+                "include": true
+              },
+              {
+                "name": "person_id",
+                "type": "string",
+                "sample": "YHVH_1",
+                "include": true
+              },
+              {
+                "name": "person_label",
+                "type": "string",
+                "sample": "G-d",
+                "include": true
+              },
+              {
+                "name": "person_label_count",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "person_verse_sequence",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "person_verse_notes",
+                "type": "string",
+                "sample": "",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:6",
+            "name": "BibleData-Reference.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "reference_id",
+                "type": "string",
+                "sample": "GEN 1:1",
+                "include": true
+              },
+              {
+                "name": "book_id",
+                "type": "boolean",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "usx_code",
+                "type": "string",
+                "sample": "GEN",
+                "include": true
+              },
+              {
+                "name": "chapter",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "verse",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "verse_sequence",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              }
+            ]
+          },
+          {
+            "$id": "t:7",
+            "name": "BibleData-PersonLabel.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "person_label_id",
+                "type": "string",
+                "sample": "YHVH_1_1",
+                "include": true
+              },
+              {
+                "name": "person_id",
+                "type": "string",
+                "sample": "YHVH_1",
+                "include": true
+              },
+              {
+                "name": "english_label",
+                "type": "string",
+                "sample": "G-d",
+                "include": true
+              },
+              {
+                "name": "hebrew_label",
+                "type": "string",
+                "sample": "אֱלֹהִים",
+                "include": true
+              },
+              {
+                "name": "hebrew_label_transliterated",
+                "type": "string",
+                "sample": "elohiym",
+                "include": true
+              },
+              {
+                "name": "hebrew_label_meaning",
+                "type": "string",
+                "sample": "rulers, judges, divine ones [all plural]",
+                "include": true
+              },
+              {
+                "name": "hebrew_strongs_number",
+                "type": "string",
+                "sample": "H430",
+                "include": true
+              },
+              {
+                "name": "greek_label",
+                "type": "string",
+                "sample": "θεός",
+                "include": true
+              },
+              {
+                "name": "greek_label_transliterated",
+                "type": "string",
+                "sample": "THeos",
+                "include": true
+              },
+              {
+                "name": "greek_label_meaning",
+                "type": "string",
+                "sample": "a deity or The Deity",
+                "include": true
+              },
+              {
+                "name": "greek_strongs_number",
+                "type": "string",
+                "sample": "G2316",
+                "include": true
+              },
+              {
+                "name": "label_reference_id",
+                "type": "string",
+                "sample": "GEN 1:1",
+                "include": true
+              },
+              {
+                "name": "label_type",
+                "type": "string",
+                "sample": "title",
+                "include": true
+              },
+              {
+                "name": "label-given_by_god",
+                "type": "string",
+                "sample": "Y",
+                "include": true
+              },
+              {
+                "name": "label_notes",
+                "type": "string",
+                "sample": "",
+                "include": true
+              },
+              {
+                "name": "person_label_count",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              },
+              {
+                "name": "label_sequence",
+                "type": "integer",
+                "sample": "1",
+                "include": true
+              }
+            ]
+          }
+        ]
+      },
+      "nodeMappings": [
+        {
+          "node": {
+            "$ref": "#n:1"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "book_name",
+              "property": {
+                "$ref": "#p:1"
+              }
+            },
+            {
+              "fieldName": "chapter_count",
+              "property": {
+                "$ref": "#p:2"
+              }
+            },
+            {
+              "fieldName": "verse_count",
+              "property": {
+                "$ref": "#p:3"
+              }
+            },
+            {
+              "fieldName": "book_id",
+              "property": {
+                "$ref": "#p:4"
+              }
+            },
+            {
+              "fieldName": "christian_sequence",
+              "property": {
+                "$ref": "#p:5"
+              }
+            },
+            {
+              "fieldName": "usx_code",
+              "property": {
+                "$ref": "#p:6"
+              }
+            },
+            {
+              "fieldName": "writer_id",
+              "property": {
+                "$ref": "#p:7"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:2"
+          },
+          "tableSchema": {
+            "$ref": "#t:2"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "id",
+              "property": {
+                "$ref": "#p:8"
+              }
+            },
+            {
+              "fieldName": "book_id",
+              "property": {
+                "$ref": "#p:9"
+              }
+            },
+            {
+              "fieldName": "chapter",
+              "property": {
+                "$ref": "#p:10"
+              }
+            },
+            {
+              "fieldName": "verse",
+              "property": {
+                "$ref": "#p:11"
+              }
+            },
+            {
+              "fieldName": "world_english_bible_web",
+              "property": {
+                "$ref": "#p:12"
+              }
+            },
+            {
+              "fieldName": "king_james_bible_kjv",
+              "property": {
+                "$ref": "#p:13"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:3"
+          },
+          "tableSchema": {
+            "$ref": "#t:3"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "person_id",
+              "property": {
+                "$ref": "#p:15"
+              }
+            },
+            {
+              "fieldName": "person_name",
+              "property": {
+                "$ref": "#p:16"
+              }
+            },
+            {
+              "fieldName": "surname",
+              "property": {
+                "$ref": "#p:17"
+              }
+            },
+            {
+              "fieldName": "unique_attribute",
+              "property": {
+                "$ref": "#p:18"
+              }
+            },
+            {
+              "fieldName": "sex",
+              "property": {
+                "$ref": "#p:19"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:4"
+          },
+          "tableSchema": {
+            "$ref": "#t:6"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "reference_id",
+              "property": {
+                "$ref": "#p:23"
+              }
+            },
+            {
+              "fieldName": "book_id",
+              "property": {
+                "$ref": "#p:24"
+              }
+            },
+            {
+              "fieldName": "usx_code",
+              "property": {
+                "$ref": "#p:25"
+              }
+            },
+            {
+              "fieldName": "chapter",
+              "property": {
+                "$ref": "#p:26"
+              }
+            },
+            {
+              "fieldName": "verse",
+              "property": {
+                "$ref": "#p:27"
+              }
+            },
+            {
+              "fieldName": "verse_sequence",
+              "property": {
+                "$ref": "#p:28"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:5"
+          },
+          "tableSchema": {
+            "$ref": "#t:7"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "person_label_id",
+              "property": {
+                "$ref": "#p:33"
+              }
+            },
+            {
+              "fieldName": "person_id",
+              "property": {
+                "$ref": "#p:34"
+              }
+            },
+            {
+              "fieldName": "english_label",
+              "property": {
+                "$ref": "#p:35"
+              }
+            },
+            {
+              "fieldName": "hebrew_label",
+              "property": {
+                "$ref": "#p:36"
+              }
+            },
+            {
+              "fieldName": "hebrew_label_transliterated",
+              "property": {
+                "$ref": "#p:37"
+              }
+            },
+            {
+              "fieldName": "hebrew_label_meaning",
+              "property": {
+                "$ref": "#p:38"
+              }
+            },
+            {
+              "fieldName": "hebrew_strongs_number",
+              "property": {
+                "$ref": "#p:39"
+              }
+            },
+            {
+              "fieldName": "greek_label",
+              "property": {
+                "$ref": "#p:40"
+              }
+            },
+            {
+              "fieldName": "greek_label_transliterated",
+              "property": {
+                "$ref": "#p:41"
+              }
+            },
+            {
+              "fieldName": "greek_label_meaning",
+              "property": {
+                "$ref": "#p:42"
+              }
+            },
+            {
+              "fieldName": "greek_strongs_number",
+              "property": {
+                "$ref": "#p:43"
+              }
+            },
+            {
+              "fieldName": "label_reference_id",
+              "property": {
+                "$ref": "#p:44"
+              }
+            },
+            {
+              "fieldName": "label_type",
+              "property": {
+                "$ref": "#p:45"
+              }
+            },
+            {
+              "fieldName": "label-given_by_god",
+              "property": {
+                "$ref": "#p:46"
+              }
+            },
+            {
+              "fieldName": "label_notes",
+              "property": {
+                "$ref": "#p:47"
+              }
+            },
+            {
+              "fieldName": "person_label_count",
+              "property": {
+                "$ref": "#p:48"
+              }
+            }
+          ]
+        }
+      ],
+      "relationshipMappings": [
+        {
+          "relationship": {
+            "$ref": "#r:1"
+          },
+          "tableSchema": {
+            "$ref": "#t:2"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:14"
+              },
+              "fieldName": "chapter"
+            }
+          ],
+          "fromMapping": {
+            "fieldName": "book_id"
+          },
+          "toMapping": {
+            "fieldName": "id"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:2"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "writer_id"
+          },
+          "toMapping": {
+            "fieldName": "book_id"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:3"
+          },
+          "tableSchema": {
+            "$ref": "#t:4"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "relationship_type",
+              "property": {
+                "$ref": "#p:20"
+              }
+            },
+            {
+              "fieldName": "relationship_category",
+              "property": {
+                "$ref": "#p:21"
+              }
+            },
+            {
+              "fieldName": "reference_id",
+              "property": {
+                "$ref": "#p:22"
+              }
+            }
+          ],
+          "fromMapping": {
+            "fieldName": "person_id_1"
+          },
+          "toMapping": {
+            "fieldName": "person_id_2"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:4"
+          },
+          "tableSchema": {
+            "$ref": "#t:6"
+          },
+          "propertyMappings": [],
+          "toMapping": {
+            "fieldName": "verse_sequence"
+          },
+          "fromMapping": {
+            "fieldName": "reference_id"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:5"
+          },
+          "tableSchema": {
+            "$ref": "#t:5"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:29"
+              },
+              "fieldName": "person_label"
+            }
+          ],
+          "fromMapping": {
+            "fieldName": "reference_id"
+          },
+          "toMapping": {
+            "fieldName": "person_id"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:6"
+          },
+          "tableSchema": {
+            "$ref": "#t:6"
+          },
+          "propertyMappings": [
+            {
+              "fieldName": "usx_code",
+              "property": {
+                "$ref": "#p:30"
+              }
+            },
+            {
+              "fieldName": "chapter",
+              "property": {
+                "$ref": "#p:31"
+              }
+            },
+            {
+              "fieldName": "verse",
+              "property": {
+                "$ref": "#p:32"
+              }
+            }
+          ],
+          "fromMapping": {
+            "fieldName": "book_id"
+          },
+          "toMapping": {
+            "fieldName": "reference_id"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:7"
+          },
+          "tableSchema": {
+            "$ref": "#t:7"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:49"
+              },
+              "fieldName": "person_label_count"
+            },
+            {
+              "property": {
+                "$ref": "#p:50"
+              },
+              "fieldName": "english_label"
+            }
+          ],
+          "fromMapping": {
+            "fieldName": "person_id"
+          },
+          "toMapping": {
+            "fieldName": "person_label_id"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:8"
+          },
+          "tableSchema": {
+            "$ref": "#t:7"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "person_label_id"
+          },
+          "toMapping": {
+            "fieldName": "label_reference_id"
+          }
+        }
+      ]
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
